@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume </title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Dynamic Resume</h1>
+        <div class="resume-builder">
+            <form id="resumeForm">
+                <h2>Personal Information</h2>
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="tel" id="phone" placeholder="Phone" required>
+
+                <h2>Education</h2>
+                <div id="educationFields">
+                    <div class="education-entry">
+                        <input type="text" class="institution" placeholder="Institution" required>
+                        <input type="text" class="degree" placeholder="Degree" required>
+                        <input type="text" class="year" placeholder="Year" required>
+                    </div>
+                </div>
+                <button type="button" id="addEducation">Add Education</button>
+
+                <h2>Work Experience</h2>
+                <div id="workFields">
+                    <div class="work-entry">
+                        <input type="text" class="company" placeholder="Company" required>
+                        <input type="text" class="position" placeholder="Position" required>
+                        <input type="text" class="duration" placeholder="Duration" required>
+                    </div>
+                </div>
+                <button type="button" id="addWork">Add Work Experience</button>
+
+                <h2>Skills</h2>
+                <div id="skillFields">
+                    <input type="text" class="skill" placeholder="Skill" required>
+                </div>
+                <button type="button" id="addSkill">Add Skill</button>
+
+                <button type="submit">Generate Resume</button>
+            </form>
+
+            <div id="resumeDisplay" class="resume-display">
+                <h2 id="resumeName"></h2>
+                <p id="resumeEmail"></p>
+                <p id="resumePhone"></p>
+
+                <h3>Education</h3>
+                <div id="resumeEducation"></div>
+
+                <h3>Work Experience</h3>
+                <div id="resumeWork"></div>
+
+                <h3>Skills</h3>
+                <ul id="resumeSkills"></ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
